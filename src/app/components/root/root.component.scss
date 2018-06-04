@@ -1,8 +1,13 @@
 $size :60px;
 $font-size :3rem;
+:host {
+    width: 100%;
+}
+
 .main {
     background-color: #718792;
     height: 100%;
+    width: 100%;
     .text {
         font-size: $font-size * 1.6;
         min-height: $font-size * 2;
@@ -14,8 +19,7 @@ $font-size :3rem;
         display: flex;
         justify-content: center;
         flex: 0 1 auto;
-        flex-wrap: wrap;
-        padding: 2rem;
+        flex-wrap: wrap; // padding: 2rem;
         .num-button-wrapper {
             flex-basis: percentage(1/3);
             position: relative;
@@ -23,9 +27,8 @@ $font-size :3rem;
                 padding-top: 35%;
                 padding-bottom: 35%;
                 width: 100%;
-                line-height: 50%;
-                border-radius: 50%; // font-size: $size*.8;
-                border: none; // line-height: $size*1.6;
+                line-height: 50%; // border-radius: 50%;
+                border: none;
                 font-size: $font-size;
                 color: white;
                 background-color: #1c313a;
