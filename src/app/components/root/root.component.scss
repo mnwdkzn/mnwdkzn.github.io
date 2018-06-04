@@ -1,40 +1,37 @@
 $size :60px;
 $font-size :3rem;
-
-.main{
+.main {
     background-color: #718792;
     height: 100%;
-}
-
-.container {
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-    flex: 0 1 auto;
-    flex-wrap: wrap;
-    padding: 0 .5rem;
-}
-
-.text{
-    font-size: $font-size * 1.6;
-    min-height: $font-size * 2;
-    color: white;
-    background-color: #1c313a;
-    padding: .5rem 0;
-}
-
-.num-button-wrapper {
-    flex-basis: 30%;
-    position: relative;
-    .num-button {
-        padding-top: 35%;
-        padding-bottom: 35%;
-        width: 100%;
-        line-height: 50%;
-        border-radius: 50%; // font-size: $size*.8;
-        border: none; // line-height: $size*1.6;
-        font-size: $font-size;
+    .text {
+        font-size: $font-size * 1.6;
+        min-height: $font-size * 2;
         color: white;
         background-color: #1c313a;
+        padding: .5rem 0;
+    }
+    .num-button-container {
+        margin: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        flex: 0 1 auto;
+        flex-wrap: wrap;
+        padding: 0 .5rem;
+        .num-button-wrapper {
+            flex-basis: 30%;
+            position: relative;
+            margin: .1rem;
+            .num-button {
+                padding-top: 35%;
+                padding-bottom: 35%;
+                width: 100%;
+                line-height: 50%;
+                border-radius: 50%; // font-size: $size*.8;
+                border: none; // line-height: $size*1.6;
+                font-size: $font-size;
+                color: white;
+                background-color: #1c313a;
+            }
+        }
     }
 }
