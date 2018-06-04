@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --hmr --progress false",
-    "build": "ng build --prod -vc -cc"
+    "build": "ng build --prod -vc -cc -oh none"
   },
   "private": true,
   "dependencies": {
