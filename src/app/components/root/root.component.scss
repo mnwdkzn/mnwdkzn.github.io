@@ -24,10 +24,11 @@ $font-size :3rem;
             flex-basis: percentage(1/3);
             position: relative;
             .num-button {
+                text-align: center;
                 padding-top: 35%;
                 padding-bottom: 35%;
                 width: 100%;
-                line-height: 50%; // border-radius: 50%;
+                // line-height: 50%; // border-radius: 50%;
                 border: none;
                 font-size: $font-size;
                 color: white;
