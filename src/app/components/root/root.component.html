@@ -3,6 +3,10 @@
     {{input}}
   </div>
 
+  <div class="progress" style="margin-top: -2px; height: 8px;" [style.visibility]="isPending?'visible':'hidden'">
+    <div class="indeterminate"></div>
+  </div>
+
   <div class="row">
 
     <div class="col" [@slideInOut]="!toggle">
@@ -10,22 +14,42 @@
         <div class="num-button" (click)="input=input+num">{{num}}</div>
       </div>
       <div class="num-button-wrapper">
-        <div class="num-button" style="background-color: #bf360c" (click)="input=''">С</div>
+        <div class="num-button" (click)="input=''">С</div>
       </div>
       <div class="num-button-wrapper">
         <div class="num-button" (click)="input=input+0">0</div>
       </div>
       <div class="num-button-wrapper">
-        <div class="num-button" style="background-color: #2e7d32" (click)="onCardClick()">💳</div>
+        <div class="num-button" (click)="onCardClick()">💳</div>
       </div>
     </div>
 
     <div class="col" [@slideInOut]="toggle">
-      <div class="num-button-wrapper">
-        <div class="num-button" style="background-color: #2e7d32" (click)="onBackwardClick()">⬅</div>
+
+      <div *ngIf="!isPending" class="content">
+
+        <div *ngIf="cardIsExists" style="font-size: 2rem;">
+          <ul>
+            <li *ngFor="let v of card.visits">{{v | date:'hh:mm dd.MM.yyyy'}}</li>
+            <li *ngFor="let v of card.visits">{{v | date:'hh:mm dd.MM.yyyy'}}</li>
+          </ul>
+        </div>
+
+        <div *ngIf="!cardIsExists">
+          Карта зарегистрируется при первом использовании
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="num-button-wrapper">
+          <div class="num-button" (click)="onBackwardClick()">⬅</div>
+        </div>
+        <div class="num-button-wrapper">
+          <div class="num-button" (click)="onRegisterClick()">Кофе</div>
+        </div>
       </div>
     </div>
 
   </div>
-  
+
 </div>
