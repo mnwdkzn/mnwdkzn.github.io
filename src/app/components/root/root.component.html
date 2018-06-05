@@ -2,19 +2,30 @@
   <div class="text">
     {{input}}
   </div>
-  <div class="num-button-container">
-    <div class="num-button-wrapper" *ngFor="let num of [1,2,3,4,5,6,7,8,9]">
-      <div class="num-button" (click)="input=input+num">{{num}}</div>
+
+  <div class="row">
+
+    <div class="col" [@slideInOut]="!toggle">
+      <div class="num-button-wrapper" *ngFor="let num of [1,2,3,4,5,6,7,8,9]">
+        <div class="num-button" (click)="input=input+num">{{num}}</div>
+      </div>
+      <div class="num-button-wrapper">
+        <div class="num-button" style="background-color: #bf360c" (click)="input=''">С</div>
+      </div>
+      <div class="num-button-wrapper">
+        <div class="num-button" (click)="input=input+0">0</div>
+      </div>
+      <div class="num-button-wrapper">
+        <div class="num-button" style="background-color: #2e7d32" (click)="onCardClick()">💳</div>
+      </div>
     </div>
 
-    <div class="num-button-wrapper">
-      <div class="num-button" style="background-color: #bf360c" (click)="input=''">С</div>
+    <div class="col" [@slideInOut]="toggle">
+      <div class="num-button-wrapper">
+        <div class="num-button" style="background-color: #2e7d32" (click)="onBackwardClick()">⬅</div>
+      </div>
     </div>
-    <div class="num-button-wrapper">
-      <div class="num-button" (click)="input=input+0">0</div>
-    </div>
-    <div class="num-button-wrapper">
-      <div class="num-button" style="background-color: #2e7d32" (click)="onCardClick()">💳</div>
-    </div>
+
   </div>
+  
 </div>
