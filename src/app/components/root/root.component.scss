@@ -1,5 +1,6 @@
-$size :120px;
-$font-size :3.5rem;
+
+$size :90px;
+
 .main {
     background-color: #1c313a;
     height: 100%;
@@ -7,7 +8,6 @@ $font-size :3.5rem;
     display: flex;
     flex-direction: column;
     color: white;
-    font-size: $font-size;
     .header {
         height: $size;
         color: white;
@@ -15,6 +15,7 @@ $font-size :3.5rem;
         display: flex;
         align-items: center;
         font-size: $size*.8;
+        padding: 0 .3rem;
     }
     .content {
         flex: 1;

@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+$font-size:45px;
+
+
 html,
 body {
     padding: 0;
@@ -7,4 +10,11 @@ body {
     width: 100%;
     position: relative;
     overflow: hidden;
+    font-family: Roboto;
+    font-size: $font-size;
+}
+
+
+.material-icons{
+    font-size: $font-size;
 }
