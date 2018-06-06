@@ -7,6 +7,9 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { RootComponent } from './components/root/root.component';
 import { CardsService } from './services/cards.service';
+import { CardComponent } from './components/card/card.component';
+import { SearchInputComponent } from './components/searchInput/searchInput.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 const config = {
   apiKey: "AIzaSyDI2HDPZifrTaZ3vBCHq4OYHC6U2NFNFfg",
@@ -19,7 +22,10 @@ const config = {
 
 @NgModule({
   declarations: [
-    RootComponent
+    RootComponent,
+    CardComponent,
+    SearchInputComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,

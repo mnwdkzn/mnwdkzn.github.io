@@ -1,8 +1,14 @@
 <div class="main">
-  <div class="text">
-    {{input}}
+  <div class="header">
+    {{search.value}}
   </div>
+  <div class="content">
+    <app-search-input class="content-item" #search (submit)="onCardClick($event)" [@slideInOut]="!toggle"></app-search-input>
+    <app-card #card class="content-item" [@slideInOut]="toggle" (submit)="toggle=false; search.value=''" (cancel)="toggle=false" ></app-card>
+  </div>
+</div>
 
+<!-- 
   <div class="progress" style="margin-top: -2px; height: 8px;" [style.visibility]="isPending?'visible':'hidden'">
     <div class="indeterminate"></div>
   </div>
@@ -49,6 +55,4 @@
       </div>
     </div>
 
-  </div>
-
-</div>
+  </div> -->

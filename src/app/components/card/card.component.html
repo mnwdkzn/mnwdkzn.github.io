@@ -1,0 +1,18 @@
+<app-progress [style.visibility]="isPending?'visible':'hidden'"></app-progress>
+
+<div class="content-wrapper" *ngIf="!isPending">
+  <div *ngIf="card && card.visits" class="content">
+    <div *ngFor="let v of card.visits" class="visit">
+      {{v | date:'HH:mm dd.MM.yyyy'}}
+    </div>
+  </div>
+
+  <div *ngIf="!card" class="content">
+    карта зарегистрируется при первом использовании
+  </div>
+</div>
+
+<div class="footer" *ngIf="!isPending">
+  <div class="button" (click)="onCancel()">cancel</div>
+  <div class="button" (click)="onSubmit()">ok</div>
+</div>

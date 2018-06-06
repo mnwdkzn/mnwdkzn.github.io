@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.content-wrapper {
+    flex: 1;
+    overflow-x: auto;
+}
+
+.content {
+    padding: 1rem;
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    min-height: 15%;
+}

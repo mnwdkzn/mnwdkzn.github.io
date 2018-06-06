@@ -1,0 +1,6 @@
+<div class="wrapper">
+  <div *ngFor="let num of [1,2,3,4,5,6,7,8,9]" class="button" (click)="value=value+num">{{num}}</div>
+  <div class="button" (click)="onClear()">C</div>
+  <div class="button" (click)="value=value+0">0</div>
+  <div class="button" (click)="onSubmit()">Ok</div>
+</div>
